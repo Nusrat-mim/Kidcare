@@ -1,1 +1,1 @@
-KidCare is a simple website to find daycares in a specific areas
+Kid Care is a simple website to find daycares in a specific area
