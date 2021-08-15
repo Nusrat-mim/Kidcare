@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><KidCare- Day Care Finder>|Kidcare.com</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Bree+Serif&family=Gochi+Hand&display=swap" rel="stylesheet"> "
-</head>
-<body>
-    <nav id="navbar">
-        <div id="logo">
-            <img src="logo.png" alt="Kidcare.com">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kid Care</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">KIDCARE<span></span></a>
+            <ul class="navigation">
+                <li><a href="#banner">Home</a></a></li>
+                <li><a href="#Sign In">Sign In</a></li>
+                <li><a href="#Sign Up">Sign Up</a></li>
+                <li><a href="#Admin">Admin</a></li>
+                <li><a href="#About Us">About Us</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
 
-        </div>
 
-        <ul>
-            <li class="item"><a href="#">About Us</a></li>
-            <li class="item"><a href="#">Admin</a></li>
-            <li class="item"><a href="#">FAQ</a></li>
-            <li class="item"><a href="#">Sign In</a></li>
-            <li class="item"><a href="#">Sign Up</a></li>
-        </ul>
-    </nav>
 
-    <section id="home">
-        <h1 class="h-primary">Welcome to KidCare</h1>
-        <p>Choose the perfect daycare for your child here</p>
-        <p>Your Child,Our responsibility</p>
-        <button class="btn">Visit Us</button>
-    </section>
 
+            </ul>
+        </header>
+
+        <section class="banner" id="banner">
+            <div class="content">
+                <h2>Welcome to Kid care</h2>
+                <p>Choose the Perfect Day Care for your Child Here</p>
+                <a href="#" class="btn">Visit Us</a>
+                </div>
+                </section>
+
+                <script type="text/javascript">
+                window.addEventListener('scroll',function(){
+                    const header = document.querySelector('header');
+                    header.classlist.toggle("sticky",window.scrollY > 0);
+                });
+                </script>
+                </body>
+                </html>
     
-</body>
-</html>
