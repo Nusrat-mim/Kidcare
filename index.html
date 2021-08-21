@@ -8,24 +8,36 @@
     </head>
     <body>
         <header>
-            <a href="#" class="logo">KIDCARE<span></span></a>
+            
+            <a href="#" class="logo">KIDCARE</a>
             <ul class="navigation">
-                <li><a href="#banner">Home</a></a></li>
-                <li><a href="#Sign In">Sign In</a></li>
-                <li><a href="#Sign Up">Sign Up</a></li>
-                <li><a href="#Admin">Admin</a></li>
-                <li><a href="#About Us">About Us</a></li>
-                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="#banner"><button class="button">Home</button></a></li>
+                <li><a href="signin.html"><button class="button">Sign In</button></a></li>
+                <li><a href="#Sign Up"><button class="button">Sign Up</button></a></li>
+                <li><a href="#Admin"><button class="button">Admin</button></a></li>
+                <li><a href="#About Us"><button class="button">About Us</button></a></li>
+                <li><a href="FAQ.html"><button class="button">FAQ</button></a></li>
 
 
 
 
             </ul>
+            <div class="icons">
+                <i class="fas fa-search" id="search-btn"></i>
+                <i class="fas fa-user" id="login-btn"></i>
+                <i class="fas fa-bars" id="menu-btn"></i>
+            </div>
+            <form actions="" class="search-bar-container">
+                <input type="search" id="search-bar" placeholder="search here...">
+                <label for="search-bar" class="fas fa-search"></label>
+            </form>
+            
+
         </header>
 
         <section class="banner" id="banner">
             <div class="content">
-                <h2>Welcome to Kid care</h2>
+                <h2>Welcome to Kid Care</h2>
                 <p>Choose the Perfect Day Care for your Child Here</p>
                 <a href="#" class="btn">Visit Us</a>
                 </div>
@@ -37,6 +49,11 @@
                     header.classlist.toggle("sticky",window.scrollY > 0);
                 });
                 </script>
+
+
+
+
+        
                 </body>
                 </html>
     
