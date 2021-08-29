@@ -1,0 +1,127 @@
+html,body{
+    height: 100%;
+}
+* {
+	box-sizing: border-box;
+  }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("6224.jpg");
+    overflow: auto;
+    min-height: 100%
+}
+.container{
+    font-family: cursive;
+    width: 80%;
+    margin: auto;
+}
+.button{
+    background-color: #D3D3D3;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: -10px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+.button:hover{
+    background-color: #f1f1f1;
+}
+/*Header*/
+header{
+	padding-top: 15px;
+	min-height: 70px;
+}
+header a{
+	color: white;
+	text-decoration: blink;
+	font-size: 16px;
+}
+header ul{
+	margin: 0;
+	padding: 0;
+}
+header li{
+	float: left;
+	display: inline;
+	padding:0 10px 20px; 
+}
+header nav{
+	float: right;
+	margin-top: 35px;
+}
+header a:hover{
+	/*font-weight: bold;*/
+	color: #7d8481;
+	/*text-decoration: underline;*/
+}
+.searchbar{
+	padding: 30px;
+	width: 450px;
+	margin :0 auto;
+}	
+.searchbar input[type="text"]{
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 55%;
+	background: white;
+}
+.searchbar input[type="submit"]{
+	float: left;
+    width: 20%;
+    padding: 10px;
+    background: transparent;
+    font-size: 17px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.searchbar select{
+	float: left;
+	appearance :none;
+	border:1px solid grey;
+	background: transparent;
+	padding: 10.5px;
+	font-size: 17px;
+}
+.tables{
+	width: auto;
+	margin: auto;
+}
+.tables table
+{
+	margin :0 auto;
+	border-collapse: collapse;
+	text-align: center;
+	background:transparent;
+	margin-bottom: 10px;
+	caption-side: top;
+}
+
+.tables table,td,th
+{
+	border: 1px solid black;
+}
+.tables th{
+	height: 30px;
+}
+.tables th,td{
+	padding: 10px;
+}
+.tables th {
+    background: transparent;
+}
+.tables p{
+	background: transparent;
+}
+.tables tr:hover{background: lightgrey;}
