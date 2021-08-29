@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kid Care</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+        
     </head>
     <body>
         <header>
@@ -12,36 +14,78 @@
             <a href="#" class="logo">KIDCARE</a>
             <ul class="navigation">
                 <li><a href="#banner"><button class="button">Home</button></a></li>
-                <li><a href="signin.html"><button class="button">Sign In</button></a></li>
-                <li><a href="#Sign Up"><button class="button">Sign Up</button></a></li>
-                <li><a href="#Admin"><button class="button">Admin</button></a></li>
-                <li><a href="#About Us"><button class="button">About Us</button></a></li>
+                <li><a href="signin.html"><button class="button">login</button></a></li>
+                <li><a href="aboutus.html"><button class="button">About Us</button></a></li>
                 <li><a href="FAQ.html"><button class="button">FAQ</button></a></li>
+                <li><a href="Blogs.html"><button class="button">Blogs</button></a></li>
+               
 
 
 
 
             </ul>
-            <div class="icons">
-                <i class="fas fa-search" id="search-btn"></i>
-                <i class="fas fa-user" id="login-btn"></i>
-                <i class="fas fa-bars" id="menu-btn"></i>
-            </div>
-            <form actions="" class="search-bar-container">
-                <input type="search" id="search-bar" placeholder="search here...">
-                <label for="search-bar" class="fas fa-search"></label>
-            </form>
             
-
-        </header>
+            </header>
 
         <section class="banner" id="banner">
             <div class="content">
                 <h2>Welcome to Kid Care</h2>
                 <p>Choose the Perfect Day Care for your Child Here</p>
-                <a href="#" class="btn">Visit Us</a>
+                <a href="visitus.html" class="btn">Visit Us</a>
                 </div>
                 </section>
+                <section class = "reviews" id = "reviews">
+                    <div class = "sec-width">
+                        <div class = "title">
+                            <h2>Reviews</h2>
+                        </div>
+                        <div class = "reviews-container">
+                            
+                            <div class = "reviews">
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                                <h3>We Loved it</h3>
+                                <p>Kid care helped me to find the best day care for my child .Now I can go to office without any tension.</p>
+                                
+                                <span>-Tahera</span>
+                            </div>
+                            
+                            <div class = "reviews">
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                                <h3>Easy solution</h3>
+                                <p>Easy solution for working pasrents.</p>
+                               
+                                <span>-Raisa</span>
+                            </div>
+                            
+                            <div class = "reviews">
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                                <h3>Nice service</h3>
+                                <p>I am pleased with their service</p>                      
+                                <span>-Sarna</span>
+                        
+                            
+                        </div>
+                    </div>
+                </section>
+
 
                 <script type="text/javascript">
                 window.addEventListener('scroll',function(){
@@ -49,11 +93,45 @@
                     header.classlist.toggle("sticky",window.scrollY > 0);
                 });
                 </script>
+                
+                 <body>
+                     <footer>
+                         <div class="row">
+                            
+                             <div class="col">
+                                 <h3>Office <div class="underline"><span></span></div></h3>
+                                 <P>B Block</P>
+                                 <P>Bashundhara Residential Area,Dhaka</P>
+                                 <p class="email-id">kidcare@gmail.com</p>
+                                 <h4>+880- 19876543210</h4>
+                                 
+                             </div>
+                             <div class="col">
+                                     <h3> Links <div class="underline"><span></span></div></h3>
+                                 <ul>
+                                     <li><a href="">Terms of Servive</a></li>
+                                     <li><a href="">Privacy Policy</a></li>
+                                     <li><a href="">Contact Us</a></li>
+                                 </ul>
+                             </div>
+                                 
+                             <div class="col">
+                                 <h3>Newsletter <div class="underline"><span></span></div></h3>
+                    
+                                 <form>
+                                    <i class="far fa-envelope"></i>
+                                     <input type="email" placeholder="Enter your email" required>
+                                     <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                                 </form>
+                                </div>
+                                <div class="social-icons">
+                                    
+                         </div>
+                        </div>
+                        <hr>
+                        <p class="copyright">Kid Care © 2021-All Rights Reserved</p>
 
-
-
-
-        
+                 
                 </body>
                 </html>
     
