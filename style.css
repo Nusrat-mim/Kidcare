@@ -6,13 +6,7 @@
     box-sizing: border-box;
     font-family:'Poppins',sans-serif;
 }
-p
-{
-    font-weight: 300;
-    color: #111;
 
-
-}
 body
 {
     min-height: 1200px;
@@ -40,7 +34,7 @@ body
 }
 .banner .content p
 {
-    font-size: 1em;
+    font-size: 2em;
     color: #fff;
 }
 .btn
@@ -60,6 +54,7 @@ body
 .btn:hover
 {
     letter-spacing: 6px;
+    color: #ff0157;
 }
 Header
 {
@@ -75,15 +70,8 @@ Header
     transition: 0.5s;
 
 }
-header.sticky
-{
-    background: #fff;
-    padding: 10px 100px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0,05);
-    
 
-}
-header.logo
+.logo
 {
     color: #fff;
     font-weight:700;
@@ -91,39 +79,33 @@ header.logo
     text-decoration: none;
 
 }
-header.sticky .logo
+.logo
 {
-    color: #111;
+    color:#ff0157;
 }
-header.logo span
-{
-    color: #ff0157;
-}
-header .navigation
+
+ .navigation
 {
     position: relative;
     display:flex;
 }
-header .navigation li
+.navigation li
 {
     list-style: none;
     margin-left: 30px;
 }
-header .navigation li a
+.navigation li a
 {
     text-decoration: none;
     color: #fff;
     font-weight:300 ;
 }
-header.sticky .navigation li a
-{
-    color: #111;
 
-}
-header .navigation li a.btn:hover
+.navigation li a.btn:hover
 {
     color: #ff0157;
 }
+      
 .button {
     background-color: #ddd;
     border: none;
@@ -138,5 +120,168 @@ header .navigation li a.btn:hover
 }
 
 .button:hover {
-    background-color: #f1f1f1;
+    background-color:#ff0157;
+}
+.reviews{
+    margin-top: 40px;
+    padding: 40px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.reviews{
+    background: #fff;
+    padding: 35px;
+    text-align: center;
+    margin: 24px 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.rating{
+    margin: 10px 0;
+    color: #ff0157;
+}
+.reviews h3{
+    font-size: 25px;
+}
+.reviews p{
+    opacity: 0.7;
+    line-height: 1.8;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.reviews span{
+    font-weight: 700;
+    opacity: 0.7;
+}
+.reviews:hover{
+    transform: translateY(-18px);
+}
+footer{
+    width:100%;
+    position:-webkit-sticky;
+    bottom: 0;
+    background: linear-gradient(to right, #ff0157, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 40px;
+
+
+
+}
+.h1{
+    width: 60%;
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    position:relative
+
+}
+.row{
+    width: 60%;
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+.col{
+    flex-basis: 40;
+    padding:10px;
+
+}
+.col:nth-child(2), .col:nth-child(3){
+    flex-basis: 15%;
+}
+.col h3{
+    width: fit-content;
+    margin-bottom: 100;
+    position: relative;
+}
+
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+
+}
+ul li{
+    list-style: none;
+    margin-bottom:12px;
+}
+ul li a{
+    text-decoration: none;
+    color:#fff;
+
+}
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+
+}
+form .far{
+    font-size: 18px;
+    margin-right: 10px;
+}
+form input{
+    width:100%;
+    background: transparent;
+    color: #ccc;
+    border:0;
+    outline: none;
+
+}
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+hr{
+    width:90%;
+    border:0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+
+}
+.copyright{
+    text-align: center;
+}
+.underline{
+    width: 50%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position:absolute;
+    top: 25px;
+    left:0;
+    overflow: hidden;
+}
+.underline span{
+    width:15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top:0;
+    left:10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left:100%
+    }
 }
