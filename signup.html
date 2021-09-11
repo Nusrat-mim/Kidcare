@@ -1,60 +1,71 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Student Register</title>
+	<title>DayCare Register</title>
+	<link rel="shortcut icon" type="image/png" href="img/icons/favicon.png"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <link rel="stylesheet" href="signin.css">
-
 <body>
-    <div class="registrationbox">
-        <h1>Student Register</h1>
-        <form action="signup.php" method="post">
-            <p>Username</p>
-            <input type="text" name="username" placeholder="Enter Username" required="">
-            <p>Password</p>
-            <input type="Password" name="password" placeholder="Enter Password" required="">
-            <p>First Name</p>
-            <input type="text" name="firstName" placeholder="First Name" required="">
-            <p>Last Name</p>
-            <input type="text" name="lastName" placeholder="Last Name" required="">
-            <p>Phone</p>
-            <input type="number" name="phone" placeholder="Phone" required="">
-            <p>Region</p>
-            <br>
-            <select name="region">
-                <option value="">Select</option>
-                <option value="Dhanmondi">Dhanmondi</option>
-                <option value="Gulshan">Gulshan</option>
-                <option value="Farmgate">Farmgate</option>
-                <option value="Lalmatia">Lalmatia</option>
-                <option value="Mohammadpur">Mohammadpur</option>
-                <option value="Moghbazar">Moghbazar</option>
-            </select>
-            <br>
-            <p>Address</p>
-            <input type="text" name="address" placeholder="Address" required="">
-            <p>Curriculum</p>
-            <br>
-            <select name="curriculum">
-                <option value="">Select</option>
-                <option value="English Version">English Version</option>
-                <option value="English Medium">English Medium</option>
-                <option value="Bangla Medium">Bangla Medium</option>
-            </select>
-            <br>
-            <p>Class</p>
-            <input type="text" name="class" placeholder="Class" required="">
-            <br>
-            <input type="submit" name="" value="Sign Up"><br>
+	<header>
+		<div class="container">
+			<div id="branding">
+				<a href="index.html"><h1>KID CARE!</h1></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="about.html"><button class="button">About Us</button></a></li>
+					<li><a href="FAQ.html"><button class="button">FAQ</button></a></li>
+					<li><a href="signinas.html"><button class="button">Sing In</button></a></li>
+					<li><a href="registeras.html"><button class="button">Sing Up</button></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-            <p>Already have an account ? </p>
-            <a href="signin.html">Sign In</a>
+	<div class="registrationbox">
+		<h1>Day Care Register</h1>
+		<form action="signup.php" method="post">
+			
+			<div class="form-group">
+				<label for="username">Day Care Name</label>
+				<input type="text" class="form-control" id="username" name="username" required="">
+			</div>
+			<div class="form-group">
+				<label for="phone">Phone</label>
+				<input type="tel" class="form-control" id="phone" name="phone" required="">
+			</div>
+			<div class="form-group">
+				<label for="address">Address</label>
+				<input type="text" class="form-control" id="address" name="address" required="">
+			</div>
+			<div class="form-group">
+				<label for="capacity">Current Capacity</label>
+				<input type="number" class="form-control" id="capacity" name="capacity" required="">
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="text" class="form-control" id="email" name="email" required="">
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" name="password" required="">
+			</div>
+			<div class="form-group">
+				<label for="fee">Fee (per month)</label>
+				<input type="number" class="form-control" id="fee" name="fee" required="">
+			</div>
+			<br>
+			<input type="submit" class="btn btn-primary"><br>
 
-        </form>
-    </div>
+			
+			<p>Already have an account ? </p>
+			<a href="dsignin.html">Sign In</a>
+
+		</form>
+	</div>
 
 
 </body>
-
 </html>
+
