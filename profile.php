@@ -43,8 +43,8 @@ $address=$retrive['address'];
 		 <div class="icon-bar">	
 			<nav>
 				<ul>	
-					<li><a href="parenthome.php"><i class="fa fa-home"><br>Home</i></a></li>
-					<li><a href="parentprofile.php"><i class="fa fa-user-circle"><br>Profile</i></a></li>
+					<li><a href="home.php"><i class="fa fa-home"><br>Home</i></a></li>
+					<li><a href="profile.php"><i class="fa fa-user-circle"><br>Profile</i></a></li>
 					<li><a href="message.php"><i class="fa fa-telegram"><br>Messages</i></a></li>
 					<li><a href="logout.php"><i class="fa fa-sign-out"><br>Logout</i></a></li>
 				</ul>
