@@ -7,7 +7,7 @@
 <body>
 	<div class="registrationbox">
 		<h1>Parent Register</h1>
-		<form action="parentsignup.php" method="post">
+		<form action="tsignup.php" method="post">
 			<p>Username</p>
 			<input type="text" name="username" placeholder="Enter Your Name" required="">
 			<p>Password</p>
@@ -24,7 +24,7 @@
 			<input type="submit" name="submit" value="Sign Up"><br>
 			
 			<p>Already have an account ?     </p>
-		<a href="parentsignin.php">Sign In</a>
+		<a href="tsignin.php">Sign In</a>
 
 		</form>
 	</div>
