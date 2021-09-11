@@ -1,71 +1,69 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>DayCare Login</title>
-	<link rel="shortcut icon" type="image/png" href="img/icons/favicon.png"/>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<link rel="stylesheet" href="signin.css">
-<body>
-	<header>
-		<div class="container">
-			<div id="branding">
-				<a href="index.html"><h1>KID CARE!</h1></a>
-			</div>
-			<nav>
-				<ul>
-					<li><a href="about.html"><button class="button">About Us</button></a></li>
-					<li><a href="FAQ.html"><button class="button">FAQ</button></a></li>
-					<li><a href="signinas.html"><button class="button">Sing In</button></a></li>
-					<li><a href="registeras.html"><button class="button">Sing Up</button></a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+<?php
 
-	<div class="registrationbox">
-		<h1>Day Care Register</h1>
-		<form action="dsignup.php" method="post">
+	error_reporting (E_ALL ^ E_NOTICE); 
+	include 'd_sendEmails.php';
+
+
+	
+	$username = $_POST['username'];	
+	$phone = $_POST['phone'];
+	$address = $_POST['address'];
+	$capacity = $_POST['capacity'];
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$fee = $_POST['fee'];
+	$token = bin2hex(random_bytes(50));
+	
+
+
+	$conn = new mysqli('localhost', 'root', '', 'daycaredb');
+	if ($conn->connect_error) {
+		die('Connection Failed : '.$conn->connect_error);
+	}
+	else{
+		
+		$sql = "SELECT * FROM daycare WHERE name = '$username' AND location = '$address'";
+		$result=$conn->query($sql);
+
+		if(!$row = mysqli_fetch_array($result)){
+
+			$password = md5($password);
+
+			$stmt = $conn->prepare("insert into daycare(name, phone, location, current_capacity, email, user_password, fee, token) values(?, ?, ?, ?, ?, ?, ?, ?)");
+			$stmt->bind_param("sssissis", $username, $phone, $address, $capacity, $email, $password, $fee, $token);
+			$stmt->execute();
+			sendVerificationEmail($email, $token);
+
+			header("Location:success.html");
+			//echo "Registration Successful";
+			$stmt->close();
+			$conn->close();
+
+		}
+		else
+		{
+			header("Location:error_daycare.html");
+		}
+	
+	}
+
+	function verifyUser($token) {
+
+		$conn = new mysqli('localhost', 'root', '', 'daycaredb');
+		$sql_1 = "SELECT * FROM daycare WHERE token='$token' LIMIT 1";
+		$result_1=$conn->query($sql_1);
+
+		if (mysqli_num_rows($result_1) > 0) {
 			
-			<div class="form-group">
-				<label for="username">Day Care Name</label>
-				<input type="text" class="form-control" id="username" name="username" required="">
-			</div>
-			<div class="form-group">
-				<label for="phone">Phone</label>
-				<input type="tel" class="form-control" id="phone" name="phone" required="">
-			</div>
-			<div class="form-group">
-				<label for="address">Address</label>
-				<input type="text" class="form-control" id="address" name="address" required="">
-			</div>
-			<div class="form-group">
-				<label for="capacity">Current Capacity</label>
-				<input type="number" class="form-control" id="capacity" name="capacity" required="">
-			</div>
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="text" class="form-control" id="email" name="email" required="">
-			</div>
-			<div class="form-group">
-				<label for="password">Password</label>
-				<input type="password" class="form-control" id="password" name="password" required="">
-			</div>
-			<div class="form-group">
-				<label for="fee">Fee (per month)</label>
-				<input type="number" class="form-control" id="fee" name="fee" required="">
-			</div>
-			<br>
-			<input type="submit" class="btn btn-primary"><br>
+			$user = mysqli_fetch_assoc($result_1);
+			$update_query = "UPDATE daycare SET verified=1 WHERE token='$token'";
 
-			
-			<p>Already have an account ? </p>
-			<a href="dsignin.html">Sign In</a>
+			if(mysqli_query($conn, $update_query)) {
+				header("Location:index.html");
+			}
+		}
 
-		</form>
-	</div>
+	}
 
 
-</body>
-</html>
-
+?>
