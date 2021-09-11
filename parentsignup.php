@@ -2,67 +2,58 @@
 <html>
 <head>
 	<title>Parent Register</title>
+	<link rel="shortcut icon" type="image/png" href="img/icons/favicon.png"/>
 </head>
 <link rel="stylesheet" href="signin.css">
 <body>
+
+	<header>
+		<div class="container">
+			<div id="branding">
+				<a href="index.html"><h1>KID CARE!</h1></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="about.html"><button class="button">About Us</button></a></li>
+					<li><a href="FAQ.html"><button class="button">FAQ</button></a></li>
+					<li><a href="signinas.html"><button class="button">Sing In</button></a></li>
+					<li><a href="registeras.html"><button class="button">Sing Up</button></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
 	<div class="registrationbox">
 		<h1>Parent Register</h1>
-		<form action="parentsignup.php" method="post">
-			<p>Username</p>
-			<input type="text" name="username" placeholder="Enter Your Name" required="">
-			<p>Password</p>
-			<input type="Password" name="password" placeholder="Enter 6 digit password" minlength="6" required="">
-			<p>First Name</p>
-			<input type="text" name="firstName" placeholder="First Name" required="">
-			<p>Last Name</p>
-			<input type="text" name="lastName" placeholder="Last Name" required="">
-			<p>Phone</p>
-			<input type="tel" name="phone" placeholder="Enter 11 digit phone number. Eg:01XXXXXXXXX" pattern="[01]{2}[0-9]{9}" required="">
-            <br>
-            <p>Address</p>
-			<input type="text" name="address" placeholder="Address" required="">
-			<input type="submit" name="submit" value="Sign Up"><br>
+		<form action="signup.php" method="post">
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="text" class="form-control" id="email" name="email">
+			</div>
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input type="text" class="form-control" id="username" name="username">
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" name="password">
+			</div>
+			<div class="form-group">
+				<label for="phone">Phone</label>
+				<input type="tel" class="form-control" id="phone" name="phone">
+			</div>
+			<div class="form-group">
+				<label for="address">Address</label>
+				<input type="text" class="form-control" id="address" name="address">
+			</div>
+			<br>
+			<input type="submit" class="btn btn-primary"><br>
 			
 			<p>Already have an account ?     </p>
-		<a href="parentsignin.php">Sign In</a>
+			<a href="signin.html">Sign In</a>
 
 		</form>
 	</div>
 
-
 </body>
 </html>
-
-<?php 
-
-if (isset($_POST["submit"])){
-include 'dbh.php';
-
-$username=mysqli_real_escape_string($conn,$_POST['username']);
-$password=mysqli_real_escape_string($conn,$_POST['password']);
-$firstName=mysqli_real_escape_string($conn,$_POST['firstName']);
-$lastName=mysqli_real_escape_string($conn,$_POST['lastName']);
-$phone=mysqli_real_escape_string($conn,$_POST['phone']);
-$address=mysqli_real_escape_string($conn,$_POST['address']);
-
-$sql = "SELECT * FROM parent WHERE username='$username'";
-$result=$conn->query($sql);
-
-
-if(!$row = mysqli_fetch_array($result))
-{
-	$sql= "INSERT INTO `parent` (`username`, `password`, `firstname`, `lastname`, `phone`, `address`) VALUES ('$username','$password','$firstName','$lastName','$phone','$address')";
-
-	$result=$conn->query($sql);
-
-	header("Location:parentsignin.php");
-}
-else
-{
-	echo '<script type="text/javascript"> alert("Error : Username already exists") </script>';
-
-	// header("Location:signup.html");
-}
-
-}
- ?>
