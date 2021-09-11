@@ -69,7 +69,7 @@ if(isset($_POST["submit"])){
 	$sql1 = "UPDATE `currentclient` SET `daycare_phone` = '$phone' WHERE `currentclient`.`daycare` = '$username'";
 	$result1=$conn->query($sql1);
 
-	header("Location:parentprofile.php");
+	header("Location:profile.php");
 
 }
 
