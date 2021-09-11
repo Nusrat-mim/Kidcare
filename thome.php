@@ -31,7 +31,6 @@ $lastname=$retrive['lastname'];
 				<ul>	
 				    <li><a href="thome.php"><i class="fa fa-home"><br>Home</i></a></li>
 					<li><a href="tprofile.php"><i class="fa fa-user-circle"><br>Profile</i></a></li>
-					<li><a href="tstatus.php"><i class="fa fa-users"><br>Status</i></a></li>
 					<li><a href="message.php"><i class="fa fa-telegram"><br>Messages</i></a></li>
 					<li><a href="logout.php"><i class="fa fa-sign-out"><br>Logout</i></a></li>
 
