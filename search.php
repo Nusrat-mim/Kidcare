@@ -9,18 +9,6 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <header>
-            <div class="container">
-                <nav id="navbar">
-                    <ul>
-                        <li><a href="Register.html"><button class="button">Sign Up</button></a></li>
-                        <li><a href="about.html"><button class="button">About</button></a></li>
-                        <li><a href="services.html"><button class="button">Services</button></a></li>
-						<li><a href="search.php"><button class="button">Search</button></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
         <div class="searchbar">
             <form method="post" action="search.php">
                 <input type="text" name="search" placeholder="What are you looking for?">
