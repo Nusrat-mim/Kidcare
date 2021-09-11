@@ -64,7 +64,7 @@ $address=$retrive['address'];
 	</div>
 
 	<div class="editprofilebtn">
-		<a href="parenteditprofile.php">Edit Profile</a>
+		<a href="editprofile.php">Edit Profile</a>
 	</div>
 
 </body>
