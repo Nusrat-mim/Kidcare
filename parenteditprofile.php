@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="signin.css">
 <body style="background-image: url(uploads/home.jpg);">
 	<div class="registrationbox">
-		<h1>Edit Profile</h1>
+		<h1>Edit Parent Profile</h1>
 		<form action="editprofile.php" method="post">
 			<p>Password</p>
 			<input type="Password" name="password" placeholder="Enter 6 digit password" minlength="6" required="">
@@ -69,7 +69,7 @@ if(isset($_POST["submit"])){
 	$sql1 = "UPDATE `currentclient` SET `daycare_phone` = '$phone' WHERE `currentclient`.`daycare` = '$username'";
 	$result1=$conn->query($sql1);
 
-	header("Location:profile.php");
+	header("Location:parentprofile.php");
 
 }
 
