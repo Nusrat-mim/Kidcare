@@ -16,54 +16,6 @@ body{
     overflow: auto;
     min-height: 100%
 }
-.container{
-    font-family: cursive;
-    width: 80%;
-    margin: auto;
-}
-.button{
-    background-color: #D3D3D3;
-    border: none;
-    color: black;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: -10px 2px;
-    cursor: pointer;
-    border-radius: 16px;
-}
-.button:hover{
-    background-color: #f1f1f1;
-}
-/*Header*/
-header{
-	padding-top: 15px;
-	min-height: 70px;
-}
-header a{
-	color: white;
-	text-decoration: blink;
-	font-size: 16px;
-}
-header ul{
-	margin: 0;
-	padding: 0;
-}
-header li{
-	float: left;
-	display: inline;
-	padding:0 10px 20px; 
-}
-header nav{
-	float: right;
-	margin-top: 35px;
-}
-header a:hover{
-	/*font-weight: bold;*/
-	color: #7d8481;
-	/*text-decoration: underline;*/
-}
 .searchbar{
 	padding: 30px;
 	width: 450px;
