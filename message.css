@@ -7,7 +7,7 @@ body{
 	line-height: 1.5;
 	padding: 0;
 	margin: 0;
-	background-image: url(uploads/home.jpg);
+	background-image: url(bg2.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
     width: 1em;
 }
  
-body::-webkit-scrollbar-track {
+.body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
  
@@ -90,5 +90,3 @@ body::-webkit-scrollbar-thumb {
 	font-size: 14px;
 	border-radius: 20px;
 }	
-
-
