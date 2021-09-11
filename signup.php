@@ -1,43 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DayCare Register</title>
+	<title>DayCare Login</title>
+	<link rel="shortcut icon" type="image/png" href="img/icons/favicon.png"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <link rel="stylesheet" href="signin.css">
 <body>
+	<header>
+		<div class="container">
+			<div id="branding">
+				<a href="index.html"><h1>KID CARE!</h1></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="about.html"><button class="button">About Us</button></a></li>
+					<li><a href="FAQ.html"><button class="button">FAQ</button></a></li>
+					<li><a href="signinas.html"><button class="button">Sing In</button></a></li>
+					<li><a href="registeras.html"><button class="button">Sing Up</button></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
 	<div class="registrationbox">
-		<h1>DayCare Register</h1>
-		<form action="signup.php" method="post">
-			<p>Username</p>
-			<input type="text" name="username" placeholder="Enter Username" required="">
-			<p>Password</p>
-			<input type="Password" name="password" placeholder="Enter 6 digit password" minlength="6" required="">
-			<p>First Name</p>
-			<input type="text" name="firstName" placeholder="First Name" required="">
-			<p>Last Name</p>
-			<input type="text" name="lastName" placeholder="Last Name" required="">
-			<p>Phone</p>
-			<input type="tel" name="phone" placeholder="Enter 11 digit phone number. Eg:01XXXXXXXXX" pattern="[01]{2}[0-9]{9}" required="">
+		<h1>Day Care Register</h1>
+		<form action="dsignup.php" method="post">
 			
-			<p>Region</p>
-            <br>
-            <select name="region">
-                
-                <option value="Dhanmondi">Dhanmondi</option>
-                <option value="Gulshan">Gulshan</option>
-                <option value="Banani">Banani</option>
-                <option value="Uttara">Uttara</option>
-                <option value="Bashundhara">Bashundhara</option>
-                <option value="Motijheel">Motijheel</option>
-            </select>
-            <br>
-            <p>Address</p>
-			<input type="text" name="address" placeholder="Address" required="">
+			<div class="form-group">
+				<label for="username">Day Care Name</label>
+				<input type="text" class="form-control" id="username" name="username" required="">
+			</div>
+			<div class="form-group">
+				<label for="phone">Phone</label>
+				<input type="tel" class="form-control" id="phone" name="phone" required="">
+			</div>
+			<div class="form-group">
+				<label for="address">Address</label>
+				<input type="text" class="form-control" id="address" name="address" required="">
+			</div>
+			<div class="form-group">
+				<label for="capacity">Current Capacity</label>
+				<input type="number" class="form-control" id="capacity" name="capacity" required="">
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="text" class="form-control" id="email" name="email" required="">
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" name="password" required="">
+			</div>
+			<div class="form-group">
+				<label for="fee">Fee (per month)</label>
+				<input type="number" class="form-control" id="fee" name="fee" required="">
+			</div>
 			<br>
-			<input type="submit" name="submit" value="Sign Up"><br>
+			<input type="submit" class="btn btn-primary"><br>
+
 			
-			<p>Already have an account ?     </p>
-		<a href="signin.php">Sign In</a>
+			<p>Already have an account ? </p>
+			<a href="dsignin.html">Sign In</a>
 
 		</form>
 	</div>
@@ -46,40 +69,3 @@
 </body>
 </html>
 
-
-<?php 
-if (isset($_POST["submit"])){
-
-include 'dbh.php';
-
-$username=mysqli_real_escape_string($conn,$_POST['username']);
-$password=mysqli_real_escape_string($conn,$_POST['password']);
-$firstName=mysqli_real_escape_string($conn,$_POST['firstName']);
-$lastName=mysqli_real_escape_string($conn,$_POST['lastName']);
-$phone=mysqli_real_escape_string($conn,$_POST['phone']);
-$region=mysqli_real_escape_string($conn,$_POST['region']);
-$address=mysqli_real_escape_string($conn,$_POST['address']);
-
-
-$sql = "SELECT * FROM daycare WHERE username='$username'";
-$result=$conn->query($sql);
-
-
-if(!$row = mysqli_fetch_array($result))
-{
-	$sql= "INSERT INTO `daycare` (`username`, `password`, `firstname`, `lastname`, `phone`, `region`, `address`) VALUES ('$username','$password','$firstName','$lastName','$phone','$region','$address')";
-
-	$result=$conn->query($sql);
-
-	header("Location:signin.php");
-}
-else
-{
-	echo '<script type="text/javascript"> alert("Error : Username already exists") </script>';
-
-	// header("Location:signup.html");
-}
-
-}
-
- ?>
