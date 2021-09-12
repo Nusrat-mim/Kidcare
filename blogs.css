@@ -111,7 +111,7 @@ img{
     transition: var(--transition);
 }
 .head-top span:hover{
-    color: var(--yellow);
+    color: yellow;
 }
 .head-bottom{
     flex: 1;
@@ -161,12 +161,12 @@ img{
 
 
 .sidenav{
-    background: var(--dark);
+    background: #292826;
     color: #fff;
     position: fixed;
     top: 0;
     bottom: 0;
-    right: -100%;
+    right: 60%;
     width: 300px;
     padding: 20px;
     transition: var(--transition);
@@ -192,6 +192,7 @@ img{
     margin-top: 50px;
     list-style: none;
     padding: 12px;
+    margin-right: 90%;
 }
 .navbar li a{
     color: #fff;
@@ -201,11 +202,12 @@ img{
     display: block;
     border-bottom: 0.5px solid rgba(249, 211, 66, 0.3);
     opacity: 0.8;
-    letter-spacing: 1.5px;
+    letter-spacing: 2%;
     transition: var(--transition);
+    margin-left: 80%;
 }
 .navbar li a:hover{
-    padding-left: 12px;
+    padding-left: 50%;
 }
 .sign-up, .log-in{
     background: var(--yellow);
